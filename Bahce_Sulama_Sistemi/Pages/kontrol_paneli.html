@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrol Paneli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Link */
+        a {
+            text-decoration: none;
+        }
+
+        /* Colors */
+        .bg-darkest-blue {
+            background: #062e51;
+        }
+
+        .bg-dark-blue {
+            background: #336ea2;
+        }
+
+        .bg-light-blue {
+            background: #70abdf;
+        }
+
+        /* Labels */
+        .white-label {
+            color: #fff;
+            font-size: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* FORM SELECT */
+        .form-select {
+            font-size: 1.2rem;
+            background-color: #336ea2;
+            color: white;
+            height: 40px;
+            width: 120px;
+            border-radius: 12px;
+            align-items: center;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid #70abdf;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        /* FORM INPUT */
+        .form-input {
+            font-size: 1.2rem;
+            background-color: #336ea2;
+            color: white;
+            height: 40px;
+            width: 300px;
+            border-radius: 12px;
+            align-items: center;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid #70abdf;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+    </style>
+
+    <style media="(max-width:768px">
+        #navbar {
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="bg-darkest-blue sticky-top">
+        <div style="font-style: oblique;" id="navbar" class="container-md p-3 d-flex justify-content-between align-items-center">
+            <a href="#top">
+                <h1 style="font-weight: bold;" class="text-light">Kontrol Paneli</h1>
+            </a>
+            <h4 id="clock" class="text-light text-center"></h4>
+            <a href="main.html">
+                <h3 class="text-light">Geri Dön</h3>
+            </a>
+        </div>
+    </header>
+
+    <!-- SECTION -->
+    <section class="bg-light-blue">
+        <form action="/kontrolform">
+            <label class="d-flex p-3 pt-4 white-label">Vana:</label>
+            <select class="form-select" name="vana" id="vana">
+                <option value="vana1" selected>1. Vana</option>
+                <option value="vana2">2. Vana</option>
+                <option value="vana3">3. Vana</option>
+                <option value="vana4">4. Vana</option>
+            </select>
+            <br> <br>
+            <label class="d-flex p-3 pt-1 white-label">Gün:</label>
+            <select class="form-select p-1" name="gun" id="gun">
+                <option value="pazartesi" selected>Pazartesi</option>
+                <option value="sali">Salı</option>
+                <option value="carsamba">Çarşamba</option>
+                <option value="persembe">Perşembe</option>
+                <option value="cuma">Cuma</option>
+                <option value="cumartesi">Cumartesi</option>
+                <option value="pazar">Pazar</option>
+            </select>
+            <br> <br>
+            <input class="form-input" type="submit" name="submit" id="submit" value="GÖSTER"> <br> <br>
+            <label class="d-flex p-3 pt-1 white-label">Vana Durumu:</label>
+            <label class="d-flex p-3 pt-1 white-label">BOŞ</label>
+        </form>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl bg-light-blue text-center pb-4">
+                    <label class="p-3 pb-1 white-label" style="font-size: 2rem; color: #336ea2;">1. Sulama Saati</label>
+                    <br>
+                    <label class="p-3 white-label">Başlangıç:</label> <label class="white-label">BOŞ</label> <br>
+                    <label class="p-3 white-label">Bitiş:</label> <label class="white-label">BOŞ</label>
+                </div>
+                <div class="col-xl bg-light-blue text-center pb-4">
+                    <label class="p-3 pb-1 white-label" style="font-size: 2rem; color: #336ea2;">2. Sulama Saati</label>
+                    <br>
+                    <label class="p-3 white-label">Başlangıç:</label> <label class="white-label">BOŞ</label> <br>
+                    <label class="p-3 white-label">Bitiş:</label> <label class="white-label">BOŞ</label>
+                </div>
+                <div class="col-xl bg-light-blue text-center pb-4">
+                    <label class="p-3 pb-1 white-label" style="font-size: 2rem; color: #336ea2;">3. Sulama Saati</label>
+                    <br>
+                    <label class="p-3 white-label">Başlangıç:</label> <label class="white-label">BOŞ</label> <br>
+                    <label class="p-3 white-label">Bitiş:</label> <label class="white-label">BOŞ</label>
+                </div>
+                <div class="col-xl bg-light-blue text-center pb-4">
+                    <label class="p-3 pb-1 white-label" style="font-size: 2rem; color: #336ea2;">4. Sulama Saati</label>
+                    <br>
+                    <label class="p-3 white-label">Başlangıç:</label> <label class="white-label">BOŞ</label> <br>
+                    <label class="p-3 white-label">Bitiş:</label> <label class="white-label">BOŞ</label>
+                </div>
+                <div class="col-xl bg-light-blue text-center pb-4">
+                    <label class="p-3 pb-1 white-label" style="font-size: 2rem; color: #336ea2;">5. Sulama Saati</label>
+                    <br>
+                    <label class="p-3 white-label">Başlangıç:</label> <label class="white-label">BOŞ</label> <br>
+                    <label class="p-3 white-label">Bitiş:</label> <label class="white-label">BOŞ</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-darkest-blue">
+        <label class="d-flex p-3 pb-1 white-label" style="font-size: 2rem; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: italic;
+        font-weight: 600;">Kristal Smart Home</label>
+        <label class="d-flex p-3 pt-1 white-label">www.kristalsmarthome.com</label>
+    </footer>
+</body>
+
+<!--TARİH SAAT-->
+<script type="text/javascript">
+    function refrClock() {
+        var d = new Date();
+        var s = d.getSeconds();
+        var m = d.getMinutes();
+        var h = d.getHours();
+        var day = d.getDay();
+        var date = d.getDate();
+        var month = d.getMonth();
+        var year = d.getFullYear();
+        var days = new Array("Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi");
+        var months = new Array("Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık");
+        if (s < 10) { s = "0" + s }
+        if (m < 10) { m = "0" + m }
+        document.getElementById("clock").innerHTML = "<b>Tarih:</b> " + date + " " + months[month] + " " + year + "   <b></b> " + days[day] + "   <br><b>Saat:</b> " + h + ":" + m + ":" + s + " "
+        setTimeout("refrClock()", 1000);
+    }
+    refrClock();
+</script>
+
+</html>

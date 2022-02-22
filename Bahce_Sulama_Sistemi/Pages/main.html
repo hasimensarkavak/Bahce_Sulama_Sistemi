@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahçe Sulama Sistemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+        /* Link */
+        a {
+            text-decoration: none;
+        }
+
+        /* Colors */
+        .bg-darkest-blue {
+            background: #062e51;
+        }
+
+        .bg-dark-blue {
+            background: #336ea2;
+        }
+
+        .bg-light-blue {
+            background: #70abdf;
+        }
+
+        /* Labels */
+        .white-label {
+            color: #fff;
+            font-size: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Buttons */
+        .buttons {
+            color: #fff;
+            font-size: 1.3rem;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transform: translate(-50%, 0%);
+            left: 50%;
+            border-radius: 12px;
+            height: 40px;
+            width: 100px;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid #336ea2;
+        }
+
+        /* Form Select */
+        .form-select-1-3 {
+            font-size: 1.2rem;
+            background-color: #70abdf;
+            color: white;
+            height: 40px;
+            width: 120px;
+            border-radius: 12px;
+            align-items: center;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid #336ea2;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .form-select-2-4 {
+            font-size: 1.2rem;
+            background-color: #336ea2;
+            color: white;
+            height: 40px;
+            width: 120px;
+            border-radius: 12px;
+            align-items: center;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid #70abdf;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        /* Form Input */
+        .form-input-1-3 {
+            font-size: 1.2rem;
+            background-color: #70abdf;
+            color: white;
+            height: 40px;
+            width: 100px;
+            border-radius: 12px;
+            align-items: center;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid #336ea2;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .form-input-2-4 {
+            font-size: 1.2rem;
+            background-color: #336ea2;
+            color: white;
+            height: 40px;
+            width: 100px;
+            border-radius: 12px;
+            align-items: center;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid #70abdf;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+    </style>
+
+    <style media="(max-width:768px">
+        #navbar {
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="bg-darkest-blue sticky-top">
+        <div style="font-style: oblique;" id="navbar" class="container-md p-3 d-flex justify-content-between align-items-center">
+            <a href="#top">
+                <h1 style="font-weight: bold;" class="text-light">Bahçe Sulama Sistemi</h1>
+            </a>
+            <h4 id="clock" class="text-light text-center"></h4>
+            <a href="kontrol_paneli.html">
+                <h3 class="text-light">Kontrol Paneli</h3>
+            </a>
+        </div>
+    </header>
+
+    <!-- SECTION -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- 1. RÖLE -->
+                <div class="col-lg bg-dark-blue">
+                    <label class="d-flex p-3 white-label">1. Vana</label>
+                    <a href="/role1/off">
+                        <button class="bg-light-blue buttons">AÇ</button>
+                    </a>
+                    <label class="d-flex p-3 pt-4 white-label">Vana Durumu: Kapalı</label>
+                    <form action="/form/1">
+                        <label class="d-flex p-3 white-label">Gün:</label>
+                        <select class=" form-select-1-3 p-1" name="gün" id="gün">
+                            <option value="pazartesi" selected>Pazartesi</option>
+                            <option value="sali">Salı</option>
+                            <option value="carsamba">Çarşamba</option>
+                            <option value="persembe">Perşembe</option>
+                            <option value="cuma">Cuma</option>
+                            <option value="cumartesi">Cumartesi</option>
+                            <option value="pazar">Pazar</option>
+                        </select> <br> <br>
+                        <label class="d-flex p-3 white-label">1. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-1-3" type="time" name="saat1" id="saat1">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-1-3" type="time" name="saat1b" id="saat1b">
+                        <label class="d-flex p-3 pt-5 white-label">2. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-1-3" type="time" name="saat2" id="saat2">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-1-3" type="time" name="saat2b" id="saat2b">
+                        <label class="d-flex p-3 pt-5 white-label">3. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-1-3" type="time" name="saat3" id="saat3">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-1-3" type="time" name="saat3b" id="saat3b">
+                        <label class="d-flex p-3 pt-5 white-label">4. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-1-3" type="time" name="saat4" id="saat4">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-1-3" type="time" name="saat4b" id="saat4b">
+                        <label class="d-flex p-3 pt-5 white-label">5. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-1-3" type="time" name="saat5" id="saat5">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-1-3" type="time" name="saat5" id="saat5b"> <br> <br>
+                        <input class="form-input-1-3 my-4" type="submit" name="kaydet" id="kaydet" value="KAYDET">
+                </div>
+                <!-- 2. RÖLE -->
+                <div class="col-lg bg-light-blue">
+                    <label class="d-flex p-3 white-label">2. Vana</label>
+                    <a href="/role2/off">
+                        <button class="bg-dark-blue buttons" style="border: 1px solid #70abdf;">AÇ</button>
+                    </a>
+                    <label class="d-flex p-3 pt-4 white-label">Vana Durumu: Kapalı</label>
+                    <form action="/form/2">
+                        <label class="d-flex p-3 white-label">Gün:</label>
+                        <select class=" form-select-2-4 p-1" name="gün" id="gün">
+                            <option value="pazartesi" selected>Pazartesi</option>
+                            <option value="sali">Salı</option>
+                            <option value="carsamba">Çarşamba</option>
+                            <option value="persembe">Perşembe</option>
+                            <option value="cuma">Cuma</option>
+                            <option value="cumartesi">Cumartesi</option>
+                            <option value="pazar">Pazar</option>
+                        </select> <br> <br>
+                        <label class="d-flex p-3 white-label">1. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-2-4" type="time" name="saat1" id="saat1">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-2-4" type="time" name="saat1b" id="saat1b">
+                        <label class="d-flex p-3 pt-5 white-label">2. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-2-4" type="time" name="saat2" id="saat2">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-2-4" type="time" name="saat2b" id="saat2b">
+                        <label class="d-flex p-3 pt-5 white-label">3. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-2-4" type="time" name="saat3" id="saat3">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-2-4" type="time" name="saat3b" id="saat3b">
+                        <label class="d-flex p-3 pt-5 white-label">4. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-2-4" type="time" name="saat4" id="saat4">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-2-4" type="time" name="saat4b" id="saat4b">
+                        <label class="d-flex p-3 pt-5 white-label">5. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-2-4" type="time" name="saat5" id="saat5">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-2-4" type="time" name="saat5" id="saat5b"> <br> <br>
+                        <input class="form-input-2-4 my-4" type="submit" name="kaydet" id="kaydet" value="KAYDET">
+                </div>
+                <!-- 3. RÖLE -->
+                <div class="col-lg bg-dark-blue">
+                    <label class="d-flex p-3 white-label">3. Vana</label>
+                    <a href="/role3/off">
+                        <button class="bg-light-blue buttons">AÇ</button>
+                    </a>
+                    <label class="d-flex p-3 pt-4 white-label">Vana Durumu: Kapalı</label>
+                    <form action="/form/3">
+                        <label class="d-flex p-3 white-label">Gün:</label>
+                        <select class=" form-select-1-3 p-1" name="gün" id="gün">
+                            <option value="pazartesi" selected>Pazartesi</option>
+                            <option value="sali">Salı</option>
+                            <option value="carsamba">Çarşamba</option>
+                            <option value="persembe">Perşembe</option>
+                            <option value="cuma">Cuma</option>
+                            <option value="cumartesi">Cumartesi</option>
+                            <option value="pazar">Pazar</option>
+                        </select> <br> <br>
+                        <label class="d-flex p-3 white-label">1. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-1-3" type="time" name="saat1" id="saat1">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-1-3" type="time" name="saat1b" id="saat1b">
+                        <label class="d-flex p-3 pt-5 white-label">2. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-1-3" type="time" name="saat2" id="saat2">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-1-3" type="time" name="saat2b" id="saat2b">
+                        <label class="d-flex p-3 pt-5 white-label">3. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-1-3" type="time" name="saat3" id="saat3">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-1-3" type="time" name="saat3b" id="saat3b">
+                        <label class="d-flex p-3 pt-5 white-label">4. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-1-3" type="time" name="saat4" id="saat4">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-1-3" type="time" name="saat4b" id="saat4b">
+                        <label class="d-flex p-3 pt-5 white-label">5. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-1-3" type="time" name="saat5" id="saat5">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-1-3" type="time" name="saat5" id="saat5b"> <br> <br>
+                        <input class="form-input-1-3 my-4" type="submit" name="kaydet" id="kaydet" value="KAYDET">
+                </div>
+                <!-- 4. RÖLE -->
+                <div class="col-lg bg-light-blue">
+                    <label class="d-flex p-3 white-label">4. Vana</label>
+                    <a href="/role4/off">
+                        <button class="bg-dark-blue buttons" style="border: 1px solid #70abdf;">AÇ</button>
+                    </a>
+                    <label class="d-flex p-3 pt-4 white-label">Vana Durumu: Kapalı</label>
+                    <form action="/form/4">
+                        <label class="d-flex p-3 white-label">Gün:</label>
+                        <select class=" form-select-2-4 p-1" name="gün" id="gün">
+                            <option value="pazartesi" selected>Pazartesi</option>
+                            <option value="sali">Salı</option>
+                            <option value="carsamba">Çarşamba</option>
+                            <option value="persembe">Perşembe</option>
+                            <option value="cuma">Cuma</option>
+                            <option value="cumartesi">Cumartesi</option>
+                            <option value="pazar">Pazar</option>
+                        </select> <br> <br>
+                        <label class="d-flex p-3 white-label">1. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-2-4" type="time" name="saat1" id="saat1">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-2-4" type="time" name="saat1b" id="saat1b">
+                        <label class="d-flex p-3 pt-5 white-label">2. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-2-4" type="time" name="saat2" id="saat2">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-2-4" type="time" name="saat2b" id="saat2b">
+                        <label class="d-flex p-3 pt-5 white-label">3. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-2-4" type="time" name="saat3" id="saat3">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-2-4" type="time" name="saat3b" id="saat3b">
+                        <label class="d-flex p-3 pt-5 white-label">4. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-2-4" type="time" name="saat4" id="saat4">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-2-4" type="time" name="saat4b" id="saat4b">
+                        <label class="d-flex p-3 pt-5 white-label">5. Sulama Saati</label>
+                        <label class="d-flex p-3 white-label">Başlangıç:</label>
+                        <input class="form-input-2-4" type="time" name="saat5" id="saat5">
+                        <label class="d-flex p-3 white-label">Bitiş:</label>
+                        <input class="form-input-2-4" type="time" name="saat5" id="saat5b"> <br> <br>
+                        <input class="form-input-2-4 my-4" type="submit" name="kaydet" id="kaydet" value="KAYDET">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-darkest-blue">
+        <label class="d-flex p-3 pb-1 white-label" style="font-size: 2rem; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: italic;
+        font-weight: 600;">Kristal Smart Home</label>
+        <label class="d-flex p-3 pt-1 white-label">www.kristalsmarthome.com</label>
+    </footer>
+</body>
+
+<!--TARİH SAAT-->
+<script type="text/javascript">
+    function refrClock() {
+        var d = new Date();
+        var s = d.getSeconds();
+        var m = d.getMinutes();
+        var h = d.getHours();
+        var day = d.getDay();
+        var date = d.getDate();
+        var month = d.getMonth();
+        var year = d.getFullYear();
+        var days = new Array("Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi");
+        var months = new Array("Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık");
+        if (s < 10) { s = "0" + s }
+        if (m < 10) { m = "0" + m }
+        document.getElementById("clock").innerHTML = "<b>Tarih:</b> " + date + " " + months[month] + " " + year + "   <b></b> " + days[day] + "   <br><b>Saat:</b> " + h + ":" + m + ":" + s + " "
+        setTimeout("refrClock()", 1000);
+    }
+    refrClock();
+</script>
+
+</html>
